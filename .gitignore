@@ -1,0 +1,6 @@
+.venv/
+__pycache__/
+.ipynb_checkpoints/
+pedidos_cache.parquet
+**/.streamlit/secrets.toml
+*.bak
