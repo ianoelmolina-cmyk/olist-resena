@@ -1,0 +1,6 @@
+nombre,como_es,accion
+Vendedores con problemas de entrega,"Tasa de retraso de 21.2%, frente a 8.6% del promedio",Alertar al vendedor cuando su retraso supere el umbral y revisar su proceso de despacho antes de sancionarlo
+Vendedores con más ventas,"Venden en promedio $24,931, frente a $9,572 del promedio de todos los vendedores",Alertar al vendedor cuando sus ventas sean menores a las del grupo con mas ventas y evaluar sus conocimientos y habilidades en ventas
+Vendedores con menos entregas,"Pocas entregas con un promedio de 23.0 pedidos, frente a 73.6 del promedio general",Ofrecer capacitaciones logísticas o incentivos de volumen para ayudarles a incrementar su cantidad de despachos.
+Vendedores con flete alto vs ventas,"Flete relativo de 52.5%, frente a 23.3% del promedio general","Sugerir optimización de empaques, contratos con transportadoras aliadas o revisión de tarifas geográficas para reducir costos de envío."
+Vendedores con diversificados,"Operan en promedio en 10.5 categorías, frente a 3.0 del promedio general",Incluirlos en campañas promocionales cruzadas (cross-selling) y darles herramientas avanzadas de gestión multi-categoría.
