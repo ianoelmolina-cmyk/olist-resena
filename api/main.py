@@ -22,25 +22,25 @@ modelo = joblib.load("modelo_riesgo.joblib")
 with open("umbral_riesgo.json") as f:
     datos_umbral = json.load(f)                # leer el JSON del umbral
 
-umbral = datos_umbral["umbral_riesgo.json"]      # ajusta la clave al nombre real en tu JSON
+umbral = datos_umbral["umbral"]      # ajusta la clave al nombre real en tu JSON
 class Pedido(BaseModel):
     order_id: str
     order_purchase_timestamp: str          # fechas como texto
     order_approved_at: Optional[str] = None
-    order_delivered_carrier_date: str
+    order_delivered_carrier_date: Optional[str] = None
     order_delivered_customer_date: str
     order_estimated_delivery_date: str
     estado_cliente: str
-    n_items: int
+    n_items: Optional[int] = None
     n_vendedores: Optional[int] = None
-    flete_total: float = Field(ge=0) 
-    peso_total_g: Optional[float] = None
-    fotos_promedio: Optional[float] = None
+    flete_total: Optional[float] = Field(default=None, ge=0)
+    peso_total_g: Optional[float] = Field(default=None, ge=0) 
+    fotos_promedio: Optional[float] = Field(default=None, ge=0) 
     categoria: Optional[str] = None
     estado_vendedor: Optional[str] = None
-    tipo_pago: str
-    cuotas_max: float = Field(ge=0)                                # las 17 columnas del contrato
-    precio_total: float = Field(ge=0)      # ge=0 -> un precio negativo da 422
+    tipo_pago: Optional[str] = None
+    cuotas_max: Optional[float] = Field(default=None, ge=0)                               # las 17 columnas del contrato
+    precio_total: Optional[float] = Field(default=None, ge=0)      # ge=0 -> un precio negativo da 422
     
 
 @app.get("/")
