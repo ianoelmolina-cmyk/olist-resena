@@ -1,7 +1,18 @@
 import streamlit as st
 
-pagina_riesgo = st.Page("paginas/riesgo.py", title="Riesgo de un pedido", icon=":material/warning:")
-pagina_ficha = st.Page(..., title="Ficha del modelo", icon=":material/description:")
+st.set_page_config(page_title="OLIST - Riesgos", layout="wide")
 
-pagina_actual = st.navigation([..., ...])
+pagina_riesgo = st.Page("paginas/riesgo.py", title="Riesgo de un pedido", icon=":material/warning:")
+pagina_ficha = st.Page("paginas/ficha.py", title="Ficha del modelo", icon=":material/description:")
+
+pagina_actual = st.navigation({
+                                "Menú":[pagina_riesgo,pagina_ficha]
+})
+
+
+with st.sidebar:
+    st.title("OLIST")
+
+
+
 pagina_actual.run()
