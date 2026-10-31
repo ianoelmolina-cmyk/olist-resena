@@ -7,7 +7,7 @@ pagina_ficha = st.Page("paginas/ficha.py", title="Ficha del modelo", icon=":mate
 pagina_comentarios = st.Page("paginas/comentarios.py", title="Comentarios sobre los pedidos", icon=":material/chat:")
 
 pagina_actual = st.navigation({
-                                "Menú":[pagina_riesgo,pagina_ficha, pagina_comentarios]
+                                "Menú":[pagina_riesgo, pagina_comentarios, pagina_ficha]
 })
 
 
